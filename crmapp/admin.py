@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Account,Contact, ContactSource, ContactStatus
+
+admin.site.register(Account)
+admin.site.register(Contact)
+admin.site.register(ContactSource)
+admin.site.register(ContactStatus)
