@@ -66,3 +66,11 @@ class Activity(models.Model):
 
     def __str__(self):
         return self.description
+
+class Event(models.Model):
+    title = models.CharField('Title',max_length=50)
+    description = models.CharField('Decription',max_length=50)
+    city = models.CharField('City',max_length=50)
+
+    def __str__(self):
+        return self.title        

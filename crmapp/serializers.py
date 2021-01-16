@@ -1,6 +1,12 @@
 from rest_framework import serializers
 
-from .models import Account, Activity, ActivityStatus, Contact, ContactSource, ContactStatus
+from .models import Account, Activity, ActivityStatus, Contact, ContactSource, ContactStatus, Event
+
+
+class EventSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Event
+        fields = ('title', 'description','city')
 
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
@@ -31,4 +37,3 @@ class ContactStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContactStatus
         fields = "__all__"
-        

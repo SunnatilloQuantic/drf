@@ -18,8 +18,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheaders',
-    'crmapp'
+    # 'rest_framework.authtoken',
+    # 'crispy_forms',
+    # 'corsheaders',
+    'crmapp',
 ]
 
 MIDDLEWARE = [
@@ -34,6 +36,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'rest_crud.urls'
+
 
 TEMPLATES = [
     {
@@ -53,14 +56,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'rest_crud.wsgi.application'
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'USER': 'root',
-        'PASSWORD': 'YOUR_DB_PASSWORD',
-        'HOST': 'localhost',
     }
 }
 
